@@ -93,12 +93,12 @@ function showcart() {
     getcart()
 }
 
-function getcart() {
+function getcart() { //
     var total = 0;
     var html = "<table class='table table-bordered table-striped'><thead class='thead-dark'><tr><th scope='col'>ID</th>" +
         "<th scope='col'>Product Name</th><th scope='col'>Price</th><th scope='col'>Quantity</th><th scope='col'>Total</th></tr></thead><tbody>"
     for (var i = 0; i < cart.length; i++) {
-        var pro = getproduct(cart[i].productid)
+        var pro = getproduct(cart[i].productid);
         total += pro.price * cart[i].quantity;
         html += "<tr><td>" + cart[i].id + "</td><td>" + pro.name + "</td><td>" + pro.price + "</td><td>" + cart[i].quantity + "</td><td>" + pro.price * cart[i].quantity + "</td></tr>"
     }
